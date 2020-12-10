@@ -495,7 +495,7 @@ function App() {
                  {/* Connect  Wallet */}
                  {/* Show account address, eth and LDF balances */}
 
-       <li class="nav-item">
+       <li class="nav-item" onClick={loadBlockchainData}>
             <Link to="/Wallet" class= 
             {
               (connected? 'nav-link':'nav-link')
