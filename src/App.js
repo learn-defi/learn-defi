@@ -39,7 +39,7 @@ function App() {
     if (!connected)
     {
       loadWeb3(); 
-      loadBlockchainData();
+      
     }
 
     else
@@ -105,7 +105,7 @@ function App() {
 
     
     if (window.ethereum) {
-      window.web3js = new Web3(window.ethereum)
+      window.web3js = await new Web3(window.ethereum)
       await window.ethereum.enable()
       setConnect(connected = true);
       setConnectStatus(connectState = "Connected")
@@ -114,7 +114,7 @@ function App() {
     }
       
       else if (window.web3) {
-      window.web3 = new Web3(window.web3.currentProvider)
+      window.web3 = await new Web3(window.web3.currentProvider)
       setConnect(connected = true);
       setConnectStatus(connectState = "Connected")
       
@@ -140,7 +140,7 @@ function App() {
 
    let loadBlockchainData = async() => {
    
-     const web3 = window.web3js;
+     const web3 = await window.web3js;
 
      const accounts = await web3.eth.getAccounts()
      setAccount(account = accounts[0])
@@ -154,19 +154,19 @@ function App() {
 
 
         // Load LearnDeFi
-        const learnDeFiData = LearnDeFi.networks[networkID]
+        const learnDeFiData = await LearnDeFi.networks[networkID]
 
         if (learnDeFiData)
         {
           if (! deployedLearnDeFi)
           {
-            const learnDeFi =  new web3.eth.Contract(LearnDeFi.abi,learnDeFiData.address)
+            const learnDeFi =  await new web3.eth.Contract(LearnDeFi.abi,learnDeFiData.address)
             await setlearnDeFis(learnDeFi)
   
              let LearnDeFiAddress = learnDeFi._address
              await setlearnDeFiAddress(LearnDeFiAddress)
 
-             let balanceOfStake = web3.utils.fromWei(await learnDeFi.methods.stakeOf(account).call(),'ether')
+             let balanceOfStake = await web3.utils.fromWei(await learnDeFi.methods.stakeOf(account).call(),'ether')
              await setbalanceOfStakes(balanceOfStake)
 
              let LDFreleaseTime = await learnDeFi.methods.releaseTime(account).call()
@@ -197,17 +197,17 @@ function App() {
 
 
       // Load LDFToken
-      const ldfTokenData = LDFToken.networks[networkID]
+      const ldfTokenData = await LDFToken.networks[networkID]
 
       if (ldfTokenData)
       {
         if (! deployedldf)
         {
-          const ldfToken =   new web3.eth.Contract(LDFToken.abi,ldfTokenData.address)
+          const ldfToken =   await new web3.eth.Contract(LDFToken.abi,ldfTokenData.address)
            setldfTokens(ldfToken)
 
            // *** await is a must for methods,otherwise it would fetch the data when it is not fully initizlize,which makes it undefined
-         let ldfBalance = web3.utils.fromWei(await ldfToken.methods.balanceOf(account).call(),'ether')
+         let ldfBalance = await web3.utils.fromWei(await ldfToken.methods.balanceOf(account).call(),'ether')
         
          let LDFaddress = await ldfToken._address;
          await setldfAddress(LDFaddress)
@@ -238,7 +238,7 @@ function App() {
 
       if (!gotRemainingBalances)
       {
-        setTimeout(loadRemainingLDF,0)
+        await setTimeout(loadRemainingLDF,0)
         setgotRemainingBalances(true);
       }
 
@@ -544,7 +544,7 @@ function App() {
             </g>
           </svg>
              
-                <span class="link-text" onClick={loadWeb3}>{connectState}</span>
+                <span class="link-text" onClick={loadBlockchainData}>{connectState}</span>
              
             </Link>
           </li>
