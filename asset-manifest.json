@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/learn-defi/static/css/main.f9797dfd.chunk.css",
+    "main.js": "/learn-defi/static/js/main.20677c16.chunk.js",
+    "main.js.map": "/learn-defi/static/js/main.20677c16.chunk.js.map",
+    "runtime-main.js": "/learn-defi/static/js/runtime-main.e7adc747.js",
+    "runtime-main.js.map": "/learn-defi/static/js/runtime-main.e7adc747.js.map",
+    "static/js/2.bf538ee8.chunk.js": "/learn-defi/static/js/2.bf538ee8.chunk.js",
+    "static/js/2.bf538ee8.chunk.js.map": "/learn-defi/static/js/2.bf538ee8.chunk.js.map",
+    "static/js/3.98fd452e.chunk.js": "/learn-defi/static/js/3.98fd452e.chunk.js",
+    "static/js/3.98fd452e.chunk.js.map": "/learn-defi/static/js/3.98fd452e.chunk.js.map",
+    "index.html": "/learn-defi/index.html",
+    "static/css/main.f9797dfd.chunk.css.map": "/learn-defi/static/css/main.f9797dfd.chunk.css.map",
+    "static/js/2.bf538ee8.chunk.js.LICENSE.txt": "/learn-defi/static/js/2.bf538ee8.chunk.js.LICENSE.txt",
+    "static/media/getLDFButton.171daeb2.png": "/learn-defi/static/media/getLDFButton.171daeb2.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e7adc747.js",
+    "static/js/2.bf538ee8.chunk.js",
+    "static/css/main.f9797dfd.chunk.css",
+    "static/js/main.20677c16.chunk.js"
+  ]
+}
