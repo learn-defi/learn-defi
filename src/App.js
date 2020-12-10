@@ -97,7 +97,9 @@ function App() {
   let [LDFReleaseTimes,setLDFReleaseTimes] = useState(0);
 
 
-  
+  // Gas
+  let [gasPrices,setGasPrices] = useState(0);
+  let [estimateGas,setEstimateGas] = useState(100000);
 
 
   const loadWeb3 = async ()=> {
@@ -146,6 +148,10 @@ function App() {
      setAccount(account = accounts[0])
    
      const networkID = await web3.eth.net.getId()
+   
+
+    
+     
 
      web3.eth.getBalance(account).then(function(balance) {
       setEthBalance(web3.utils.fromWei(balance,'ether'))
@@ -186,7 +192,33 @@ function App() {
             console.log(
               // "Learn DeFi Contract: " 
              learnDeFis)
+
+
+            //  Get Gas Data
+             if (web3.eth)
+             {
+              //  Set gas price
+              let gasPrice = 0
+              gasPrice = await web3.eth.getGasPrice()
+              setGasPrices(gasPrice)
+              console.log(gasPrice)
+        
+              // Set estimate gas
+              if (learnDeFiAddress)
+              {
+                
+                web3.eth.estimateGas({from: web3.eth.accounts[0], to: "0xEDA8A2E1dfA5B93692D2a9dDF833B6D7DF6D5f93", amount: web3.utils.toWei("1", "ether")}).then(function(result)
+                {
+                  console.log("estimate Gas", result)
+                  
+                })
+              }
+
+             }
+
+
              await setdeployedLearnDeFi(true)
+
              
 
              
@@ -264,6 +296,8 @@ function App() {
          to: learnDeFis._address,
         //  send 1 eth now avoid test in mainnet
          value: 1 * demicals,
+         gasPrice: gasPrices,
+         gas: estimateGas
 
        }
        ,function (err,transactionHash)
