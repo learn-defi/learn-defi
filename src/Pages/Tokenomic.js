@@ -21,7 +21,7 @@ export default function Tokenomic() {
                 <li> ⎼ </li>
 
                 <li>Usage : </li>
-                <li>✣ Access Learn DeFi Tutorail</li>
+                <li>✣ Access Learn DeFi Tutorial</li>
                 <li>✣ Store of Ð Value </li>
                 <li> ⏐ </li>
                 <li> ▫︎ Initial Supply : 200 - 500 </li>    
