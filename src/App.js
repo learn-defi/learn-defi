@@ -988,7 +988,7 @@ function App() {
 
 {/* React countdown , increase day after 1610 */}
 
-{/* 
+
 <h3 class="presale-text">Presale ends in :</h3>
  ▼
 <div class="countdown">
@@ -1002,12 +1002,12 @@ function App() {
 
 
 
-<Countdown date={1608580230000 + 1000000000 } >
+<Countdown date={1608580230000 + 2000000000 } >
  
       <Completionist />
     </Countdown>
     </span>
-    </div> */}
+    </div>
 
 
 {/* React countdown , increase day after 1610 */}
