@@ -218,6 +218,7 @@ function App() {
 
 
              await setdeployedLearnDeFi(true)
+             setConnectStatus(connectState = "Connected")
 
              
 
