@@ -30,7 +30,7 @@ export default function Tokenomic() {
                 <li> ▫︎ Team and Reserve: Total Supply - above </li>
                 <li>⇣</li>
                 <li>For more details, click &nbsp;
-                    <a href="" class="tokenomic-link">HERE</a> 
+                    <a href="https://learndefi.medium.com/why-learn-defi-d19c3a655a57" class="tokenomic-link">HERE</a> 
                     </li>
 
 
