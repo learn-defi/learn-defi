@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/learn-defi/static/css/main.f9797dfd.chunk.css",
-    "main.js": "/learn-defi/static/js/main.9f0ce811.chunk.js",
-    "main.js.map": "/learn-defi/static/js/main.9f0ce811.chunk.js.map",
+    "main.js": "/learn-defi/static/js/main.b8a1bea9.chunk.js",
+    "main.js.map": "/learn-defi/static/js/main.b8a1bea9.chunk.js.map",
     "runtime-main.js": "/learn-defi/static/js/runtime-main.ec849f5f.js",
     "runtime-main.js.map": "/learn-defi/static/js/runtime-main.ec849f5f.js.map",
     "static/js/2.a8272839.chunk.js": "/learn-defi/static/js/2.a8272839.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.ec849f5f.js",
     "static/js/2.a8272839.chunk.js",
     "static/css/main.f9797dfd.chunk.css",
-    "static/js/main.9f0ce811.chunk.js"
+    "static/js/main.b8a1bea9.chunk.js"
   ]
 }
