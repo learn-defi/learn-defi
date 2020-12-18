@@ -46,7 +46,6 @@ function App() {
     {
         loadBlockchainData();
 
-      
     }
    
     
@@ -116,7 +115,7 @@ function App() {
     }
       
       else if (window.web3) {
-      window.web3 = await new Web3(window.web3.currentProvider)
+      window.web3js = await new Web3(window.web3.currentProvider)
       setConnect(connected = true);
       setConnectStatus(connectState = "Connected")
       
