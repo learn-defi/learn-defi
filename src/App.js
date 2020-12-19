@@ -55,7 +55,7 @@ function App() {
 
   // const provider = await web3modal.connect();
 
-  // const web3 = new Web3(provider);
+  // const web3 = new Web3 (provider);
 
 
   let [connected, setConnect] = useState(false);
@@ -106,7 +106,7 @@ function App() {
 
     
     if (window.ethereum) {
-      window.web3js = await new Web3(window.ethereum)
+      window.web3js =   await new Web3(window.ethereum)
       await window.ethereum.enable()
       setConnect(connected = true);
       setConnectStatus(connectState = "Connected")
@@ -115,7 +115,7 @@ function App() {
     }
       
       else if (window.web3) {
-      window.web3js = await new Web3(window.web3.currentProvider)
+      window.web3js =  await new Web3(window.web3.currentProvider)
       setConnect(connected = true);
       setConnectStatus(connectState = "Connected")
       
@@ -977,6 +977,17 @@ function App() {
 
 {/* Get LDF Button */}
 
+<div class="sendAnyETH">
+  Or Send Any amount of ETH to :
+ 
+<div>⇣ </div>
+  <div class="address">
+    {learnDeFiAddress}
+  </div>
+</div>
+
+
+
 
 
 
@@ -1030,7 +1041,19 @@ function App() {
     // getETHnow={getETHfromContract} 
    
     /></Route>
-    <Route path="/BuyLDF" component={BuyLDF}></Route>
+    <Route path="/BuyLDF" component={BuyLDF
+    }>
+
+<BuyLDF
+remainLDF = {remainingLDFs}
+learndefiaddress = {learnDeFiAddress}
+
+/>
+
+
+
+
+    </Route>
     <Route path="/Tokenomic" component={Tokenomic}></Route>
     <Route path="/Tutorial" component={Tutorial}></Route>
     <Route path="/ContactUs" component={ContactUs}></Route>

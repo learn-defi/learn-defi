@@ -522,3 +522,11 @@ li {
 .footer-link {
   color: #F1AA32;
 }
+
+.sendAnyETH {
+  padding-bottom: 2rem;
+}
+
+.address {
+  color: #049253;
+}

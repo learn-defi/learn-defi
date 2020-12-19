@@ -19,6 +19,8 @@ export default function ContactUs() {
                 <li>If you find any resources that may infringes copyright.</li>
                 <li>Please contract us and we would resolve it.</li>
                 <li> Thank you. 🦩 </li>
+                <li>✉︎  </li>
+                <li><a href="mailto: learndefi@gmail.com">learndefi@gmail.com</a></li>
             </ul>
             
             

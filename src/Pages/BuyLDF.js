@@ -2,7 +2,7 @@ import React from 'react'
 import getLDFButton from '../Images/getLDFButton.png';
 
 
-export default function BuyLDF() {
+export default function BuyLDF(props) {
     return (
         <div>
           
@@ -37,8 +37,13 @@ export default function BuyLDF() {
                  
                  &nbsp;  (
                      {/* Pass sold LDF to this function with this.prop later */}
-                     {500} Limited)  
+                     {props.remainLDF} Remaining)  
                 </li>
+                <li>
+                <span class="filled">⎔ </span> 
+                  Send Any amount of ETH → 
+                  {props.learndefiaddress}
+                  </li>
 
                 <li class="unactive-li"> ↓ </li>
 
